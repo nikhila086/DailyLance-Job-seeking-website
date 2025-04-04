@@ -1,2 +1,21 @@
-Backend/config/config.env
+# Ignore node_modules (contains all npm dependencies)
+Backend/node_modules/
 
+# Ignore environment files (store secrets like API keys, DB credentials)
+Backend/config/*.env
+
+# Ignore log files
+*.log
+
+# Ignore build directories if you use any
+Backend/build/
+Backend/dist/
+
+# Ignore IDE/editor specific files (for VS Code, IntelliJ, etc.)
+Backend/.vscode/
+Backend/.idea/
+
+# Ignore npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
