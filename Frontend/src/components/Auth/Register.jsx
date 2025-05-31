@@ -49,8 +49,8 @@ const Register = () => {
   return (
     <section style={styles.page}>
       <div style={styles.card}>
-        <h2 style={styles.title}>Create Account 🪄</h2>
-        <p style={styles.subtitle}>Start your journey with JobZee</p>
+        <h2 style={styles.title}>Create Account</h2>
+        <p style={styles.subtitle}>Start your journey with JobLance</p>
         <form style={styles.form} onSubmit={handleRegister}>
           <div style={styles.inputGroup}>
             <label style={styles.label}>Register As</label>

@@ -5,11 +5,6 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-// Load fonts
-const fontJosefin = document.createElement("link");
-fontJosefin.href = "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap";
-fontJosefin.rel = "stylesheet";
-document.head.appendChild(fontJosefin);
 
 const fontSpecial = document.createElement("link");
 fontSpecial.href = "https://fonts.googleapis.com/css2?family=Pacifico&display=swap";
@@ -42,7 +37,7 @@ const Navbar = () => {
       backgroundColor: "#CEE5D0",
       padding: "1rem 2rem",
       borderRadius: "0 0 1rem 1rem",
-      fontFamily: "'Josefin Sans', sans-serif",
+      //fontFamily: "'Josefin Sans', sans-serif",
       boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
       zIndex: 999,
       position: "relative",
@@ -77,14 +72,14 @@ const Navbar = () => {
       borderRadius: window.innerWidth > 768 ? "0" : "1rem",
       boxShadow: window.innerWidth > 768 ? "none" : "0 8px 16px rgba(0,0,0,0.1)",
       listStyle: "none",
-      gap: "1.5rem",
+      gap: "1.6rem",
       alignItems: "center",
       margin: 0,
       zIndex: 1000,
     },
     link: (hovered) => ({
       textDecoration: "none",
-      fontWeight: 600,
+      fontWeight: 500,
       color: hovered ? "#D8B384" : "#5E454B",
       fontSize: "1.1rem",
       transition: "all 0.3s ease",
