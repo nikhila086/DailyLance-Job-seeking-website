@@ -1,5 +1,7 @@
 # Ignore node_modules (contains all npm dependencies)
 Backend/node_modules/
+# Ignore all node_modules folders globally
+node_modules/
 
 # Ignore environment files (store secrets like API keys, DB credentials)
 Backend/config/*.env
