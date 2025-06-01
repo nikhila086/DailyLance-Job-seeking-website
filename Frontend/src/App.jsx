@@ -22,22 +22,17 @@ const App = () => {
   const { isAuthorized , setIsAuthorized , setUser } = useContext(Context)
 
   useEffect(() => {
-    const fetchUser = async () => {
+    const fetchUser = async() =>{
       try {
-        const response = await axios.get(
-          `https://joblance-m1us.onrender.com/api/v1/user/getuser`,
-          { withCredentials: true }
-        );
-        if (response.data?.user) {
-          setUser(response.data.user);
-          setIsAuthorized(true);
-        }
+        const response = await axios.get(`https://joblance-m1us.onrender.com/api/v1/user/getuser`, { withCredentials: true })
+        setUser(response.data.user)
+        setIsAuthorized(true)
       } catch (error) {
-        setIsAuthorized(false);
+        setIsAuthorized(false)
       }
-    };
-    fetchUser();
-  }, []);
+    }
+    fetchUser()
+  }, [isAuthorized])
 
 
 
@@ -67,4 +62,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App  
