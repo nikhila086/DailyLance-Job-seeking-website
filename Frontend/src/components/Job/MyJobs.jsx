@@ -17,7 +17,7 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/job/getmyjobs",
+          "${import.meta.env.VITE_SERVER}/api/v1/job/getmyjobs",
           { withCredentials: true }
         );
         setMyJobs(data.myJobs);
@@ -42,7 +42,7 @@ const MyJobs = () => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
     try {
       const res = await axios.put(
-        `http://localhost:4000/api/v1/job/update/${jobId}`,
+        `${import.meta.env.VITE_SERVER}/api/v1/job/update/${jobId}`,
         updatedJob,
         { withCredentials: true }
       );
@@ -56,7 +56,7 @@ const MyJobs = () => {
   const handleDeleteJob = async (jobId) => {
     try {
       const res = await axios.delete(
-        `http://localhost:4000/api/v1/job/delete/${jobId}`,
+        `${import.meta.env.VITE_SERVER}/api/v1/job/delete/${jobId}`,
         { withCredentials: true }
       );
       toast.success(res.data.message);
