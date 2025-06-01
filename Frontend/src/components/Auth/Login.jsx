@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "${import.meta.env.VITE_SERVER}/api/v1/user/login",
+        "https://joblance-m1us.onrender.com/api/v1/user/login",
         { email, password, role },
         {
           headers: {

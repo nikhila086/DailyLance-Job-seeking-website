@@ -25,7 +25,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_SERVER}/api/v1/user/getuser`,
+          `https://joblance-m1us.onrender.com/api/v1/user/getuser`,
           { withCredentials: true }
         );
         if (response.data?.user) {

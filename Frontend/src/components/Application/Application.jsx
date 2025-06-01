@@ -121,7 +121,7 @@ const Application = () => {
 
     try {
       const { data } = await axios.post(
-        "${import.meta.env.VITE_SERVER}/api/v1/application/post",
+        "https://joblance-m1us.onrender.com/api/v1/application/post",
         formData,
         {
           withCredentials: true,

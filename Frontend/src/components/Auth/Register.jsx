@@ -21,7 +21,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "${import.meta.env.VITE_SERVER}/api/v1/user/register",
+        "https://joblance-m1us.onrender.com/api/v1/user/register",
         { name, phone, email, role, password },
         {
           headers: {

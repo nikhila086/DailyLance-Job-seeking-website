@@ -87,7 +87,7 @@ const JobDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_SERVER}/api/v1/job/${id}`, {
+      .get(`https://joblance-m1us.onrender.com/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {

@@ -112,7 +112,7 @@ const Jobs = () => {
 
   useEffect(() => {
     axios
-      .get("${import.meta.env.VITE_SERVER}/api/v1/job/getall", {
+      .get("https://joblance-m1us.onrender.com/api/v1/job/getall", {
         withCredentials: true,
       })
       .then((res) => {

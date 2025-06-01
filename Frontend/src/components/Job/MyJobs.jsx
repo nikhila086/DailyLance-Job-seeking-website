@@ -17,7 +17,7 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       try {
         const { data } = await axios.get(
-          "${import.meta.env.VITE_SERVER}/api/v1/job/getmyjobs",
+          "https://joblance-m1us.onrender.com/api/v1/job/getmyjobs",
           { withCredentials: true }
         );
         setMyJobs(data.myJobs);
@@ -42,7 +42,7 @@ const MyJobs = () => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
     try {
       const res = await axios.put(
-        `${import.meta.env.VITE_SERVER}/api/v1/job/update/${jobId}`,
+        `https://joblance-m1us.onrender.com/api/v1/job/update/${jobId}`,
         updatedJob,
         { withCredentials: true }
       );
@@ -56,7 +56,7 @@ const MyJobs = () => {
   const handleDeleteJob = async (jobId) => {
     try {
       const res = await axios.delete(
-        `${import.meta.env.VITE_SERVER}/api/v1/job/delete/${jobId}`,
+        `https://joblance-m1us.onrender.com/api/v1/job/delete/${jobId}`,
         { withCredentials: true }
       );
       toast.success(res.data.message);

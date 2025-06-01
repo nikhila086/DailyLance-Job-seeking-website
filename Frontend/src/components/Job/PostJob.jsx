@@ -109,7 +109,7 @@ const PostJob = () => {
     }
     try {
       const response = await axios.post(
-        "${import.meta.env.VITE_SERVER}/api/v1/job/post",
+        "https://joblance-m1us.onrender.com/api/v1/job/post",
         fixedSalary.length >= 4
           ? { title, description, category, country, city, location, fixedSalary }
           : { title, description, category, country, city, location, salaryFrom, salaryTo },
